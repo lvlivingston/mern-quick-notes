@@ -4,8 +4,8 @@ import { getUser } from '../../utilities/users-service';
 import React from 'react';
 import AuthPage from '../AuthPage/AuthPage';
 import NavBar from '../../components/NavBar/NavBar';
-import NewOrderPage from '../NewOrderPage/NewOrderPage';
-import OrderHistoryPage from '../OrderHistoryPage/OrderHistoryPage';
+import NewNotePage from '../NewNotePage/NewNotePage';
+import AllNotesPage from '../AllNotesPage/AllNotesPage';
 import './App.css';
 
 export default function App() {
@@ -17,8 +17,8 @@ export default function App() {
       <>
         <NavBar user={ user } setUser={ setUser }/>
         <Routes>
-          <Route path="/orders/new" element={ <NewOrderPage /> } />
-          <Route path="/orders" element={ <OrderHistoryPage /> } />
+          <Route path="/notes/new" element={ <NewNotePage user={ user }/> } />
+          <Route path="/notes" element={ <AllNotesPage /> } />
         </Routes>
       </>
       :

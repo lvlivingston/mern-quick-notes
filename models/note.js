@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 const bcrypt = require('bcrypt');
-const Note = mongoose.model('Note', noteSchema);
+// const Note = mongoose.model('Note', noteSchema);
 
 const noteSchema = new mongoose.Schema(
     {

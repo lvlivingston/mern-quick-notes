@@ -10,6 +10,7 @@ import './App.css';
 
 export default function App() {
   const [user, setUser] = useState(getUser());
+  const [notes, setNotes] = useState([]);   
   
   return (
     <main className="App">
@@ -18,7 +19,7 @@ export default function App() {
         <NavBar user={ user } setUser={ setUser }/>
         <Routes>
           <Route path="/notes/new" element={ <NewNotePage user={ user }/> } />
-          <Route path="/notes" element={ <AllNotesPage /> } />
+          <Route path="/notes" element={ <AllNotesPage notes={ notes } /> } />
         </Routes>
       </>
       :

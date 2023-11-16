@@ -1,6 +1,6 @@
 import NewNoteForm from "../../components/NewNoteForm/NewNoteForm";
 
-export default function NewNotePage({ notes, user }) {  
+export default function NewNotePage({ notes, setNotes, user }) {  
     
     const handleAddNote = (newNote) => {
         console.log('Added note:', newNote);
@@ -9,7 +9,7 @@ export default function NewNotePage({ notes, user }) {
     return (
         <div>
             <h1>New Note Page</h1>
-            <NewNoteForm onAddNote={handleAddNote} notes={ notes } user={ user }/>
+            <NewNoteForm onAddNote={handleAddNote} notes={ notes } user={ user } setNotes={ setNotes } />
         </div>
     );
 }

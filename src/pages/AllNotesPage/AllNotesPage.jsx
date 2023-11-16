@@ -2,8 +2,7 @@ import { useState } from 'react';
 import { checkToken } from "../../utilities/users-service";
 import NewNoteForm from '../../components/NewNoteForm/NewNoteForm';
 
-export default function AllNotesPage() {
-    const [notes, setNotes] = useState([]);    
+export default function AllNotesPage( { notes } ) {  
 
     async function handleCheckToken() {
         const expDate = await checkToken()
